@@ -11,9 +11,9 @@ class User:
     def withdrow(self,amount):
         self.account_balance -= amount
 
-    def transfer_fund(self,amount,name):
+    def transfer_fund(self,amount,other_user):
         self.account_balance -= amount
-        user3.account_balance += amount
+        other_user.account_balance += amount
     
     def display_balance(self):
         print(f'{self.name} have a balance of {self.account_balance}')
@@ -26,7 +26,7 @@ user1.make_deposit(100)
 user1.make_deposit(100)
 user1.make_deposit(100)
 user1.withdrow(20)
-user1.transfer_fund(40)
+user1.transfer_fund(40,user3)
 
 user2.make_deposit(400)
 user2.make_deposit(400)
